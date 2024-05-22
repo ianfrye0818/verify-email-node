@@ -6,7 +6,6 @@ const router = express.Router();
 
 const verifyService = VerifyService.getInstance();
 
-// Create an instance of the VerifyController, passing in the verifyService instance.
 const verifyController = new VerifyController(verifyService);
 
 router.post('/verify-email', verifyController.verifyEmail);
