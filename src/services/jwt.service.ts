@@ -1,8 +1,8 @@
 import jwt, { JwtPayload } from 'jsonwebtoken';
-import { JWTPayload } from '../types';
+// import { JWTPayload } from '../types';
 
 export class JwtService {
-  private static JWT_SECRET = process.env.JWT_SECRET || 'MYSECRET';
+  private static JWT_SECRET = process.env.JWT_SECRET;
   private static instance: JwtService;
 
   private constructor() {
