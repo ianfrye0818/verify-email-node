@@ -4,11 +4,7 @@ import { VerifyService } from '../services/verify.service';
 const verifyService = VerifyService.getInstance();
 
 export class VerifyController {
-  private verifyService: VerifyService;
-
-  constructor(verifyService: VerifyService) {
-    this.verifyService = verifyService;
-  }
+  constructor() {}
 
   async verifyEmail(req: Request, res: Response) {
     const email = req.body.email || 'ianfrye3@gmail.com';

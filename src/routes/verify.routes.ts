@@ -1,12 +1,9 @@
 import express from 'express';
 import { VerifyController } from '../controllers/verify.controller';
-import { VerifyService } from '../services/verify.service';
 
 const router = express.Router();
 
-const verifyService = VerifyService.getInstance();
-
-const verifyController = new VerifyController(verifyService);
+const verifyController = new VerifyController();
 
 router.post('/verify-email', verifyController.verifyEmail);
 
